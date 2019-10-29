@@ -90,7 +90,9 @@ export class ShowDetailsComponent implements OnInit {
       //console.log("this.allEmployees.length ", this.allEmployees.length);
       localStorage.setItem("employee", JSON.stringify(this.allEmployees));
       this.isSelected = false;
-      this.isEmployee = false;
+      if(this.allEmployees.length == 0){
+        this.isEmployee = false;
+      }
     }
 
   }
