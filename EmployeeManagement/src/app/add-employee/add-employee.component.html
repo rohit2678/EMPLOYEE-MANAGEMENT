@@ -1,0 +1,34 @@
+<form #f="ngForm">
+<table align="center">
+    <th>Add Employee: </th><br>
+    <tr>
+        <td>Employee Name: </td>
+        <td><input type="text" minlength="3" name="name" [(ngModel)]="name" placeholder="Enter Employee Name" required></td>
+    </tr>
+    <br>
+    <tr>
+        <td>Company Name: </td>
+        <td><input type="text" minlength="5" name="company" [(ngModel)]="company" placeholder="Enter Company Name" required></td>
+    </tr>
+    <br>
+    <tr>
+        <td>Email Id: </td>
+        <td><input type="email" name="email" [(ngModel)]="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" placeholder="Enter Email Id" required></td>
+    </tr>
+    <br>
+    <tr>
+        <td>Contact Number: </td>
+        <td><input type="number" pattern="^[6-9]\d{9}$" name="contact" [(ngModel)]="contact" placeholder="Enter Contact Number" required></td>
+    </tr>
+    <br>
+    <tr>
+        <td>Designation: </td>
+        <td><input type="text" minlength="5" name="designation" [(ngModel)]="designation" placeholder="Enter Employee Designation" required></td>
+    </tr>
+    <br>
+    <tr>
+        <td><button type="button" (click)="onCancel()" [disabled]="!f.valid">Cancel</button></td>
+        <td><button type="button" (click)="onAdd()" [disabled]="!f.valid">ADD</button></td>
+    </tr>
+</table>
+</form>
