@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from '../task.service';
 import { Employee } from '../employee.model';
 
 @Component({
@@ -16,7 +15,7 @@ export class AddEmployeeComponent implements OnInit {
   designation: string
   employee: Array<Employee> = [];
 
-  constructor(private task: TaskService) { }
+  constructor() { }
 
 
   ngOnInit() {
@@ -42,7 +41,7 @@ export class AddEmployeeComponent implements OnInit {
       }
       else {
         console.log("EmployeeList ", employeeArray);
-        console.log("Employee", this.task.employee);
+        console.log("Employee", this.employee);
         this.employee.push(...employeeArray);
         this.employee.push({ name: this.name.toUpperCase(), avatar: ("E" + (Math.floor(100000 + Math.random() * 900000))), companyName: this.company.toUpperCase(), contactNo: this.contact, designation: this.designation.toUpperCase(), emailID: this.email.toUpperCase() });
         localStorage.setItem("employee", JSON.stringify(this.employee));

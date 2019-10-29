@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { TaskService } from './task.service';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { MenuComponent } from './menu/menu.component';
@@ -29,7 +28,7 @@ const router: Routes = [
     FormsModule,
     RouterModule.forRoot(router)
   ],
-  providers: [TaskService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from '../task.service';
 import { Employee } from '../employee.model';
 import { Alert } from 'selenium-webdriver';
 
@@ -10,7 +9,7 @@ import { Alert } from 'selenium-webdriver';
 })
 export class ShowDetailsComponent implements OnInit {
 
-  constructor(private task: TaskService) { }
+  constructor() { }
 
   employee: Employee;
   allEmployees: Array<Employee> = [];
